@@ -26,17 +26,17 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-fcccf38a327138c48c78.js"
+    "url": "webpack-runtime-b0b13a2482427229259e.js"
   },
   {
-    "url": "app-290fabe4bc0ac517887b.js"
+    "url": "app-760c87d32ee0d3ee3b60.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-5610241a36f1357ea367.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cab86a3736fae04618dc7ca7eb90a414"
+    "revision": "9259365f33b67a625ba47b9dad44c127"
   },
   {
     "url": "1-cdf70bb750b8c2bb4902.js"
@@ -45,7 +45,7 @@ self.__precacheManifest = [
     "url": "component---src-pages-404-js-b4c595fc1f85bfd3ac2d.js"
   },
   {
-    "url": "0-5778aeb9f4a334865e8d.js"
+    "url": "0-769a5167c998ca196fa8.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -84,7 +84,7 @@ var navigationRoute = new workbox.routing.NavigationRoute(function (_ref) {
 
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      var offlineShell = "/offline-plugin-app-shell-fallback/index.html";
+      var offlineShell = "/dev-monami/offline-plugin-app-shell-fallback/index.html";
       var cacheName = workbox.core.cacheNames.precache;
       return caches.match(offlineShell, {
         cacheName: cacheName
@@ -159,7 +159,7 @@ var messageApi = {
           includesPrefix = _ref3.includesPrefix;
 
       if (!includesPrefix) {
-        return "" + pathname;
+        return "/dev-monami" + pathname;
       } else {
         return pathname;
       }
