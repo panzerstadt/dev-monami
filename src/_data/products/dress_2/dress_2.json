@@ -1,0 +1,16 @@
+{
+  "data": {
+    "page": "women",
+    "brand": "Target",
+    "type": "dress",
+    "price": "rm35",
+    "sizes": {
+      "bust": "80cm",
+      "waist": "92cm",
+      "hip": "110cm",
+      "description": "slim fit for the waist"
+    },
+    "descriptions": "",
+    "tags": ["monami18", "dress", "target"]
+  }
+}

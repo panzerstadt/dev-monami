@@ -1,0 +1,68 @@
+.link {
+  font-weight: 100;
+  margin: 0;
+  font-family: serif;
+  color: #695d47;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.selected {
+  composes: link;
+  text-decoration: underline;
+  color: #f0b67f;
+}
+
+.navbar {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    font-size: 1rem;
+  }
+}
+
+.subNavbar {
+  display: none;
+  z-index: 15;
+  position: absolute;
+  top: 170px;
+  min-height: 100px;
+  width: 100%;
+  padding: 5px 0;
+
+  background-color: #f0f0f0ee;
+}
+
+.navbar:hover .subNavbar {
+  display: initial;
+}
+
+.subNavbarText {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1.6rem 1.45rem;
+}
+
+.subLink {
+  font-weight: 100;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #877a5f;
+  text-decoration: none;
+}
+
+.subLink:hover {
+  text-decoration: underline;
+}

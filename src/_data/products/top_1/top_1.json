@@ -1,13 +1,13 @@
 {
+  "data": {
     "page": "women",
     "brand": "",
     "type": "top",
     "price": "rm35",
-    "size": "XL(as stated on the shirt, but will suit an M-L size)",
+    "sizes": {
+      "description": "XL(as stated on the shirt, but will suit an M-L size)"
+    },
     "descriptions": "a wonderful and unique top. The floral petals are loosely tied to the top to give a 3D feel",
-    "tags": [
-        "monami18",
-        "top",
-        "floral petal"
-    ]
+    "tags": ["monami18", "top", "floral petal"]
+  }
 }

@@ -1,11 +1,11 @@
 // main imports
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 
 // components
-import Image from '../components/Image'
-import SEO from '../components/SEO'
-import Gallery from '../components/Gallery'
+import Image from '../../components/Image'
+import SEO from '../../components/SEO'
+import Gallery from '../../components/Gallery'
 
 const PageTemplate = ({ location }) => {
   const [category, setCategory] = useState('')
@@ -19,12 +19,21 @@ const PageTemplate = ({ location }) => {
 
   return (
     <div>
-      <SEO title="Men" keywords={['cool', 'trendy', 'affordable']} />
-      <div className="page" style={{ margin: '3rem auto' }}>
+      <SEO
+        title="Women"
+        keywords={['fashion', 'summer', 'winter', 'autumn', 'spring', 'trendy']}
+      />
+      <div
+        className="page"
+        style={{
+          margin: '3rem auto',
+          minHeight: '70vh',
+        }}
+      >
         <Gallery
           filter={{
             key: 'page',
-            value: 'men',
+            value: 'women',
             subFilter: { key: 'type', value: category },
           }}
         />

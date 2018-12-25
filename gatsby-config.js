@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/dev-monami',
   siteMetadata: {
     title: 'Monami 18',
     description:
@@ -6,6 +7,12 @@ module.exports = {
     author: '@panzerstadt',
   },
   plugins: [
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        typeName: 'Json',
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -19,6 +26,12 @@ module.exports = {
       options: {
         name: `products`,
         path: `${__dirname}/src/_data/products`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/layouts/index.js'),
       },
     },
     'gatsby-transformer-sharp',

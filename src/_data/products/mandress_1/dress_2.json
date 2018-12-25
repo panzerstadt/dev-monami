@@ -1,0 +1,15 @@
+{
+  "data": {
+    "page": "men",
+    "brand": "Target",
+    "type": "man-dress",
+    "price": "rm35",
+    "sizes": {
+      "bust": "80cm",
+      "waist": "92cm",
+      "hip": "110cm"
+    },
+    "descriptions": "a dress for the man",
+    "tags": ["monami18", "dress", "target"]
+  }
+}

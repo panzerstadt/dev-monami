@@ -1,0 +1,96 @@
+.brandTitle {
+  margin-top: 70px;
+  color: #695d47;
+}
+
+.price {
+  z-index: 10;
+  position: initial;
+  background-color: #ffe1a3;
+  padding: 5px 15px;
+  bottom: 20px;
+  border-radius: 5px;
+}
+
+.priceLeft {
+  composes: price;
+  left: 500px;
+}
+
+.priceRight {
+  composes: price;
+  right: 500px;
+}
+
+.descriptions {
+  z-index: 10;
+  position: initial;
+  max-width: 350px;
+}
+
+.descriptionsLeft {
+  composes: descriptions;
+  left: 500px;
+}
+
+.descriptionsRight {
+  composes: descriptions;
+  right: 500px;
+}
+
+.imgBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.left {
+  composes: imgBlock;
+  justify-content: flex-start;
+}
+
+.right {
+  composes: imgBlock;
+  justify-content: flex-end;
+}
+
+.img {
+  width: 100%;
+  z-index: 0;
+}
+
+@media (min-width: 600px) {
+  .img {
+    width: 500px;
+  }
+  .imgBlock {
+    flex-direction: row;
+  }
+  .price {
+    position: absolute;
+  }
+  .priceLeft {
+    margin-left: -20px;
+  }
+  .priceRight {
+    margin-right: -20px;
+  }
+  .descriptions {
+    width: 500px;
+    bottom: 100px;
+    position: absolute;
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  .descriptionsLeft {
+    text-align: left;
+    margin-left: 25px;
+  }
+  .descriptionsRight {
+    text-align: right;
+    margin-right: 25px;
+  }
+}

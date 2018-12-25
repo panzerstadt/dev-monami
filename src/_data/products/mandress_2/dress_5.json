@@ -1,0 +1,15 @@
+{
+  "data": {
+    "page": "men",
+    "brand": "Primark",
+    "type": "dress",
+    "price": "rm35",
+    "sizes": {
+      "bust": "80cm",
+      "waist": "92cm",
+      "hip": "110cm"
+    },
+    "descriptions": "sharp evening dress for the millenial youngster on the go",
+    "tags": ["monami18", "dress", "target"]
+  }
+}

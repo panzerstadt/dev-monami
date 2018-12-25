@@ -1,13 +1,11 @@
 {
+  "data": {
     "page": "women",
     "brand": "Pull & Bear",
     "type": "dress",
     "price": "rm35",
-    "size": "EUR size s",
+    "sizes": { "description": "EUR size s" },
     "descriptions": "",
-    "tags": [
-        "monami18",
-        "dress",
-        "pull&bear"
-    ]
+    "tags": ["monami18", "dress", "pull&bear"]
+  }
 }

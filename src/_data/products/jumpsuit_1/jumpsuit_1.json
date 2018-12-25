@@ -1,0 +1,15 @@
+{
+  "data": {
+    "page": "women",
+    "brand": "",
+    "type": "jumpsuit",
+    "price": "rm40",
+    "sizes": {
+      "bust": "29cm",
+      "waist": "stretchable",
+      "hip": "67cm"
+    },
+    "descriptions": "",
+    "tags": ["monami18", "jumpsuit"]
+  }
+}

@@ -1,15 +1,16 @@
+// main imports
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+// components
+import SEO from '../components/SEO'
 
 import ErrorPage from '../components/Error'
 
 const NotFoundPage = () => (
-  <Layout>
+  <div>
     <SEO title="404: Not found" />
     <ErrorPage />
-  </Layout>
+  </div>
 )
 
 export default NotFoundPage

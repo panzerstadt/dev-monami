@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+// creates pages programmatically
+// call createPages on every json object here

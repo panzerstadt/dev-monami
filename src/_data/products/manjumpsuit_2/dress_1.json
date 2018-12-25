@@ -1,0 +1,15 @@
+{
+  "data": {
+    "page": "men",
+    "brand": "Minkpink",
+    "type": "jumpsuit",
+    "price": "rm28",
+    "sizes": {
+      "bust": "84cm",
+      "waist": "76cm",
+      "hip": "112cm"
+    },
+    "descriptions": "it's a jumpsuit, need I say more?",
+    "tags": ["monami18", "dress", "minkpink"]
+  }
+}

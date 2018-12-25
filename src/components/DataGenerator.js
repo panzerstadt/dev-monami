@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
-
-import Layout from '../components/Layout'
+import { Link, graphql, StaticQuery } from 'gatsby'
 
 // // image loading example
 // const DummyImage = () => (
@@ -23,20 +21,14 @@ import Layout from '../components/Layout'
 
 const DataGenerator = ({ data }) => {
   console.log(data)
-  return (
-    <Layout>
-      <div>
-        some data here <Link to="/404">press link!</Link>
-      </div>
-    </Layout>
-  )
+  return <StaticQuery query={ProductsQuery} render={data => ''} />
 }
 
 export default DataGenerator
 
 export const ProductsQuery = graphql`
   {
-    allFile {
+    pages: allFile {
       edges {
         node {
           sourceInstanceName
