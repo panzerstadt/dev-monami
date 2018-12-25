@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{172:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),l=(t(8),t(183),t(180)),i=t(194);n.default=function(){return r.a.createElement("div",null,r.a.createElement(l.a,{title:"Accessories",keywords:["fashion","summer","winter","autumn","spring","trendy"]}),r.a.createElement("div",{style:{margin:"3rem auto",maxWidth:600}},r.a.createElement("h2",null,"all files"),r.a.createElement(i.a,null)))}}}]);
+//# sourceMappingURL=component---src-pages-accessories-js-45c0542e38d80af3d202.js.map
