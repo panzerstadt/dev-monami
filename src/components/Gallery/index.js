@@ -77,8 +77,6 @@ const Gallery = ({ filter }) => {
                         out = (
                           <ReactJson
                             data={d}
-                            name={d.product}
-                            collapsed={true}
                             theme={googleTheme}
                           />
                         )
@@ -87,7 +85,6 @@ const Gallery = ({ filter }) => {
                         out = (
                           <ReactJson
                             data={d}
-                            collapsed={true}
                             theme={googleTheme}
                           />
                         )

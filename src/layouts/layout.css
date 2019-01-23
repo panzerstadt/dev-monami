@@ -2,3 +2,22 @@
   max-width: 1200px;
   padding: 0 1.0875rem 1.45rem;
 }
+
+.footer {
+  padding: 0 1.0875rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 0 1.0875rem;
+  z-index: 100;
+}
+
+.highlight-gold {
+  text-shadow: 1.5px 1px 1px rgb(255, 219, 100);
+}
+
+.smooth-transition {
+  transition: all 300ms ease-out;
+}

@@ -19,21 +19,50 @@ export const Image = ({ fluid_data }) => {
   return <Img fluid={fluid_data} />
 }
 
-const DummyImage = () => (
+export const UIImages = ({ query }) => (
   <StaticQuery
     query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+      {
+        UIImages: allFile(
+          filter: {
+            sourceInstanceName: { eq: "images" }
+            relativeDirectory: { eq: "pablo" }
+            extension: { in: ["png", "jpg", "jpeg"] }
+          }
+        ) {
+          edges {
+            node {
+              sourceInstanceName
+              product: relativeDirectory
+              name
+              extension
+              relativePath
+              changeTime
+              url: childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => {
+      return (
+        <Img
+          fluid={
+            data.UIImages.edges.filter(
+              (v, i) =>
+                v.node.name === query || i === data.UIImages.edges.length - 1
+            )[0].node.url.fluid
+          }
+        />
+      )
+    }}
   />
 )
+
+const DummyImage = () => <img src="#" />
 
 export default DummyImage

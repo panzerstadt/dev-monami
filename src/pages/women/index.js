@@ -13,9 +13,11 @@ const PageTemplate = ({ location }) => {
   //https://stackoverflow.com/questions/44506207/reactjs-lifecycle-method-inside-a-functional-component
   useEffect(() => {
     if (location.state) {
-      setCategory(location.state.category)
+      if (location.state.category !== category) {
+        setCategory(location.state.category)
+      }
     }
-  }, [])
+  })
 
   return (
     <div>

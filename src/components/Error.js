@@ -18,6 +18,7 @@ const ErrorPage = ({ children }) => {
       borderRight: '1px solid rgba(0, 0, 0,.3)',
       margin: 0,
       marginRight: 20,
+      marginBottom: 40,
       padding: '10px 23px 10px 0',
       fontSize: '24px',
       fontWeight: 500,
@@ -35,7 +36,7 @@ const ErrorPage = ({ children }) => {
   }
   return (
     <div style={dummyPageStyle.page}>
-      <div style={{ height: 150 }}>
+      <div style={{ height: 180 }}>
         <h1 style={dummyPageStyle.text}>project goals</h1>
         <p style={dummyPageStyle.dummyContent}>
           website: <strong>"gib me data i gib you finished webpage"</strong>

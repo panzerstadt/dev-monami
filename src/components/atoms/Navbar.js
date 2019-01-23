@@ -5,6 +5,7 @@ import _ from 'lodash'
 
 import styles from './Navbar.module.css'
 
+import { HOME_HEADER_HEIGHT, OTHERS_HEADER_HEIGHT } from '../../utils/constants'
 const ALL_LINKS = [
   {
     url: '/women',
@@ -18,18 +19,18 @@ const ALL_LINKS = [
     url: '/accessories',
     label: 'Accessories',
   },
-  {
-    url: '/occasions',
-    label: 'Occasions',
-  },
+  // {
+  //   url: '/occasions',
+  //   label: 'Occasions',
+  // },
   {
     url: '/about',
     label: 'About Us',
   },
-  {
-    url: '/contact',
-    label: 'Contact',
-  },
+  // {
+  //   url: '/contact',
+  //   label: 'Contact',
+  // },
 ]
 
 // make a function to spit out the 'Link' output because you're doing
@@ -39,6 +40,7 @@ const NavLink = ({
   href_link,
   text,
   selected,
+  onClick,
   onMouseOver,
   state,
   ...rest
@@ -47,6 +49,7 @@ const NavLink = ({
     <Link
       key={i}
       to={href_link}
+      onClick={onClick}
       onMouseOver={onMouseOver}
       style={{ textDecoration: 'none' }}
       state={state}
@@ -58,7 +61,7 @@ const NavLink = ({
   )
 }
 
-const SubNavbar = ({ categories, selected, hovered }) => {
+const SubNavbar = ({ categories, selected, hovered, onClick, home }) => {
   //const page = selected.pathname.replace(/\//g, '')
   const navCategories = _.intersectionBy(
     categories.filter(v => v.page === hovered),
@@ -82,6 +85,7 @@ const SubNavbar = ({ categories, selected, hovered }) => {
         text={v.label}
         selected={v.url === selected.pathname}
         state={{ category: v.label }}
+        onClick={onClick}
       />
     )
   })
@@ -91,9 +95,12 @@ const SubNavbar = ({ categories, selected, hovered }) => {
   }
 
   return (
-    <div className={styles.subNavbar}>
+    <div
+      className={styles.subNavbar}
+      style={{ top: home ? HOME_HEADER_HEIGHT : OTHERS_HEADER_HEIGHT }}
+    >
       <div className={styles.subNavbarText}>
-        <h2>Shop by Category</h2>
+        <h2 className="highlight-gold">Shop by Category</h2>
         {navBarOut}
       </div>
     </div>
@@ -114,8 +121,13 @@ const NavbarDiv = ({ onMouseOver, selected }) =>
     )
   })
 
-const Navbar = ({ selected, categories }) => {
+const Navbar = ({ selected, categories, home }) => {
   const [hovered, setHovered] = useState('')
+
+  const setCategory = e => {
+    const category = e.target.innerHTML
+    //console.log(e.target.innerHTML)
+  }
 
   return (
     <div className={styles.navbar}>
@@ -130,15 +142,17 @@ const Navbar = ({ selected, categories }) => {
         }}
       />
       <SubNavbar
+        home={home}
         selected={selected}
         hovered={hovered}
         categories={categories}
+        onClick={setCategory}
       />
     </div>
   )
 }
 
-const HierarchicalNavBar = ({ selected }) => (
+const HierarchicalNavBar = ({ selected, home }) => (
   <StaticQuery
     query={NavbarQuery}
     render={data => {
@@ -147,7 +161,7 @@ const HierarchicalNavBar = ({ selected }) => (
         type: v.node.jsonData.data.type,
       }))
 
-      return <Navbar selected={selected} categories={allTypes} />
+      return <Navbar home={home} selected={selected} categories={allTypes} />
     }}
   />
 )

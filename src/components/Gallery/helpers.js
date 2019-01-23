@@ -58,8 +58,8 @@ export const filterProducts = ({ filter, data, ...rest }) => {
     return out
   }
 
-  console.log('filtering')
-  console.log(filter)
+  //console.log('[Gallery.helpers] filtering')
+  //console.log(filter)
   const pageSet = filterProductSet(
     sets,
     filterCriteria.key,
@@ -74,8 +74,8 @@ export const filterProducts = ({ filter, data, ...rest }) => {
       filterCriteria.subFilter.key,
       filterCriteria.subFilter.value
     )
-    console.log('category set')
-    console.log(categorySet)
+    //console.log('[Gallery.helpers] category set')
+    //console.log(categorySet)
     return categorySet
   }
 

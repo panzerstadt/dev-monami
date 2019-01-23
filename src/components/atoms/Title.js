@@ -2,23 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { rhythm, scale } from '../../utils/typography'
 
-const titleBarStyle = {
-  textAlign: 'center',
-  width: '100%',
-  paddingBottom: 15,
-}
+import styles from './Title.module.css'
 
-const logoStyle = {
-  ...scale(1.5),
-  color: '#BDA989',
-  textDecoration: 'none',
-  margin: 0,
-}
-
-const Monami = () => (
-  <div style={titleBarStyle}>
+const Monami = ({ home }) => (
+  <div className={styles.titleBar}>
     <Link to="/" style={{ textDecoration: 'none' }}>
-      <h1 style={logoStyle}>Monami 18</h1>
+      <h1 className={home ? styles.home : styles.others}>Monami 18</h1>
     </Link>
   </div>
 )
