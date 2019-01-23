@@ -1,0 +1,78 @@
+.bubbleComponent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.bubble {
+  pointer-events: all;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 999px;
+  border: none;
+
+  background-color: rgb(255, 229, 145);
+
+  box-shadow: 0 2px 15px rgba(32, 32, 32, 0.137);
+}
+
+.bubble:focus {
+  outline: 0;
+}
+
+.bubble:hover {
+  background-color: white;
+}
+
+.bubbleOverlay {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+
+  margin-bottom: 10px;
+  z-index: 1000;
+  pointer-events: all;
+}
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.results {
+  width: 100%;
+  max-width: 600px;
+  max-height: 60%;
+  overflow-y: scroll;
+  margin: 0 auto;
+
+  z-index: 1000;
+}
+
+.location {
+  /* position: absolute; */
+  margin: 0;
+  height: 30px;
+}

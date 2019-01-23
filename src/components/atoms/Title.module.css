@@ -26,11 +26,11 @@
   font-size: 25px;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .home {
     margin-top: -60px;
   }
   .others {
     margin-top: -35px;
   }
-}
+} */

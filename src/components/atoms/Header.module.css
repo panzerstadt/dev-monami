@@ -16,31 +16,3 @@
   composes: header;
   background-color: #ffffffd2;
 }
-
-.titleBar {
-  display: block;
-  width: 100%;
-
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.functionsRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 10px;
-}
-
-@media (min-width: 600px) {
-  .titleRow {
-    margin-bottom: -45px;
-  }
-}
-
-.location {
-  /* position: absolute; */
-  margin: 0;
-  height: 30px;
-}

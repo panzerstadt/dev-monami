@@ -15,22 +15,6 @@
   padding: 10px;
 
   border-radius: 8px;
-  width: 80%;
-}
-
-@media (min-width: 600px) {
-  .searchbar {
-    margin-left: 1.0875rem;
-    width: 200px;
-  }
-
-  .searchbarHome {
-    composes: searchbar;
-    top: 50px;
-  }
-
-  .searchbarOthers {
-    composes: searchbar;
-    top: 10px;
-  }
+  width: 75%;
+  margin-right: 20px;
 }
