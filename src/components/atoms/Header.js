@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Header.module.css'
 
@@ -12,7 +12,18 @@ import {
 } from '../../utils/constants'
 
 const Header = ({ selected }) => {
-  const home = selected.pathname === '/' || selected.pathname === PATH_PREFIX
+  const [home, setHome] = useState(true)
+
+  useEffect(() => {
+    if (selected.pathname === '/') {
+      setHome(true)
+    } else if (selected.pathname === PATH_PREFIX) {
+      setHome(true)
+    } else {
+      setHome(false)
+    }
+  })
+
   const hHeight = home ? HOME_HEADER_HEIGHT : OTHERS_HEADER_HEIGHT
 
   return (

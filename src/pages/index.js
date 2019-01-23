@@ -11,8 +11,6 @@ import DataGenerator from '../components/DataGenerator'
 
 const IMG = <img src="./clothes-sml.jpg" className={styles.bg} />
 
-console.log(IMG)
-
 const IndexPage = () => (
   <div>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
