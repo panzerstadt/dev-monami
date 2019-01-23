@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{180:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a),r=(t(8),t(188),t(185)),i=t(199);n.default=function(){return l.a.createElement("div",null,l.a.createElement(r.a,{title:"occasions",keywords:["fashion","summer","winter","autumn","spring","trendy"]}),l.a.createElement("div",{style:{margin:"3rem auto",maxWidth:600}},l.a.createElement("h2",null,"all files"),l.a.createElement(i.a,null)))}}}]);
+//# sourceMappingURL=component---src-pages-occasions-js-932b3a0f592a099372ac.js.map
