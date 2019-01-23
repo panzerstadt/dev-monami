@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{185:function(e,t,n){"use strict";n.r(t);var a=n(0),l=n.n(a),r=(n(6),n(66),n(192)),i=n(205);t.default=function(){return l.a.createElement("div",null,l.a.createElement(r.a,{title:"contact",keywords:["fashion","summer","winter","autumn","spring","trendy"]}),l.a.createElement("div",{style:{margin:"3rem auto",maxWidth:600}},l.a.createElement("h2",null,"all files"),l.a.createElement(i.a,null)))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-3463339ed644d8657a16.js.map
