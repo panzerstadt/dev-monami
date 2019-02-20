@@ -51,7 +51,7 @@ const NavLink = ({
       to={href_link}
       onClick={onClick}
       onMouseOver={onMouseOver}
-      style={{ textDecoration: 'none' }}
+      style={{ textDecoration: 'none', zIndex: 50 }}
       state={state}
     >
       <p className={selected ? styles.selected : styles.link} {...rest}>

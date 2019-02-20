@@ -10,9 +10,11 @@
 .home {
   composes: header;
   background-color: none;
+  background: linear-gradient(#fff, #ffffffd2);
 }
 
 .others {
   composes: header;
-  background-color: #ffffffd2;
+  /* background-color: #ffffffd2; */
+  background: linear-gradient(#fff, #fffffff0, #ffffffd2);
 }

@@ -91,3 +91,13 @@ export const filterProducts = ({ filter, data, ...rest }) => {
   s.map(v => (out[v.key] = sets[v.key]))
   return out
 }
+
+export function importAll(r) {
+  let images = {}
+  r.keys().map((item, index) => {
+    images[item.replace('./', '')] = r(item)
+    return null
+  })
+  //console.log(images);
+  return images
+}

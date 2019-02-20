@@ -1,9 +1,11 @@
 .link {
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
   /* font-family: serif; */
-  color: #695d47;
+  color: #021b2d;
   text-decoration: none;
+  font-family: 'Pangolin', sans-serif;
+  font-size: 17px;
 }
 
 .link:hover {
@@ -18,7 +20,8 @@
 
 .navbar {
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+
   /* height: 100%; */
   /* padding: 5px 0;
   background-color: #f0f0f0; */
@@ -58,10 +61,14 @@
   padding: 0 1.6rem 1.45rem;
 }
 
+.subNavbarText > h2 {
+  font-family: 'Walter Turncoat', serif;
+}
+
 .subLink {
   font-weight: 100;
   margin: 0;
-  /* font-family: sans-serif; */
+  font-family: 'Pangolin', sans-serif;
   font-size: 0.8rem;
   color: #877a5f;
   text-decoration: none;

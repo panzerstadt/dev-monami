@@ -10,7 +10,7 @@
 .header {
   position: sticky;
   top: 0;
-  padding: 0 1.0875rem;
+  /* padding: 0 1.0875rem; */
   z-index: 100;
 }
 
@@ -28,7 +28,8 @@
 
 ::-webkit-scrollbar {
   /*width: 0px; remove scrollbar space */
-  background: transparent; /* optional: just make scrollbar invisible */
+  width: 6px;
+  background: white; /* optional: just make scrollbar invisible */
 }
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {

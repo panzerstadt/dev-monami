@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import _ from 'lodash'
 import ReactJson from 'react-json-tree'
 
-import { filterProducts } from './helpers'
+import { filterProducts, importAll } from './helpers'
 
 // page types
 import { StandardGallery } from './components'
@@ -33,6 +33,17 @@ const googleTheme = {
 
 const displayProduct = data => {
   return <p>hey</p>
+}
+
+export const galleryProducts = () => {
+  const imgs = importAll(
+    require.context('../../_data/products', true, /.*\.jpg$/)
+  )
+
+  const imgKeys = Object.keys(imgs)
+  return imgKeys.map(v => {
+    return { key: v, file: imgs[v] }
+  })
 }
 
 /**
@@ -74,20 +85,10 @@ const Gallery = ({ filter }) => {
                         out = <img width={125} src={d.img.src} />
                       } else if (d.product) {
                         // product-labelled json
-                        out = (
-                          <ReactJson
-                            data={d}
-                            theme={googleTheme}
-                          />
-                        )
+                        out = <ReactJson data={d} theme={googleTheme} />
                       } else {
                         // default is json
-                        out = (
-                          <ReactJson
-                            data={d}
-                            theme={googleTheme}
-                          />
-                        )
+                        out = <ReactJson data={d} theme={googleTheme} />
                       }
 
                       return (

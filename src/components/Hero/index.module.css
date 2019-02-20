@@ -1,0 +1,38 @@
+.gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  /* custom according to images */
+
+  z-index: 0;
+  background-color: #e1e1e1;
+}
+
+.imgs {
+  transition: all 150ms ease-out;
+  position: absolute;
+}
+
+.hoverable:hover {
+  background: linear-gradient(rgb(255, 219, 100), #e1e1e100);
+}
+
+.hoverProduct {
+  z-index: 1000;
+  display: none;
+}
+
+.hoverable:hover .hoverProduct {
+  display: block;
+}
+
+/* very interesting 'picking out-a-card' effect */
+/* .hoverable:hover {
+  margin-right: -100px;
+  margin-top: -100px;
+  background: linear-gradient(rgb(255, 219, 100), #e1e1e100);
+} */

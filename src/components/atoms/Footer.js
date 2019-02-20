@@ -5,14 +5,6 @@ import { rhythm, scale } from '../../utils/typography'
 
 import styles from './Footer.module.css'
 
-const footerStyle = {
-  height: '100%',
-  width: '100%',
-  //backgroundColor: '#021B2D',
-  //color: '#F0F0F0',
-  display: 'flex',
-}
-
 const infoBoxStyle = {
   //width: '60%',
   display: 'flex',
@@ -34,8 +26,8 @@ const navLink = (href_link, text, color = '#C1C1C1') => {
 }
 
 const BottomContent = () => (
-  <div style={infoBoxStyle}>
-    <div style={infoBoxStyle.infoBox}>
+  <div className={styles.infoBoxComponent}>
+    <div className={styles.infoBox}>
       <h4 className={'highlight-gold ' + styles.linkTitle}>Help</h4>
       {navLink('/contact#purchase', 'Purchase')}
       <br />
@@ -44,7 +36,7 @@ const BottomContent = () => (
       {navLink('/contact#FAQ', 'FAQs')}
     </div>
     <div />
-    <div style={infoBoxStyle.infoBox}>
+    <div className={styles.infoBox}>
       <h4 className={'highlight-gold ' + styles.linkTitle}>About Us</h4>
       {navLink('/about#company', 'The Company')}
       <br />
@@ -56,16 +48,18 @@ const BottomContent = () => (
 )
 
 const Footer = ({ height }) => (
-  <div
-    className="footer"
-    style={{
-      //height: height || footerHeight,
-      width: '100%',
-    }}
-  >
-    <hr />
-    <div className={styles.footer}>
-      <BottomContent />
+  <div className={styles.footerComponent}>
+    <div
+      className="footer"
+      style={{
+        //height: height || footerHeight,
+        width: '100%',
+      }}
+    >
+      <hr />
+      <div className={styles.footer}>
+        <BottomContent />
+      </div>
     </div>
   </div>
 )

@@ -54,6 +54,12 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.js',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Pangolin', 'Walter Turncoat'],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',

@@ -148,8 +148,9 @@ export const StandardGallery = ({ images, labels, randomFlip }) => {
 
   return (
     <div>
-      <h3 className={styles.brandTitle}>{brand || 'no-brand'}</h3>
+      <br />
       <hr />
+      {/* <h3 className={styles.brandTitle}>{brand || 'no-brand'}</h3> */}
       {galleryOut}
     </div>
   )
